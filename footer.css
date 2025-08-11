@@ -1,0 +1,48 @@
+.FooterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  border-top: 1px solid rgb(25, 25, 25);
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.FooterContent {
+
+}
+
+.FooterLinkContainer {
+  width: 500px;
+}
+
+.FooterLinkTitle {
+  color: gray;
+  font-size: 17px;
+}
+
+.FooterLinkContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.FooterLink {
+  color: gray;
+  font-size: 14px;
+  width: 110px;
+  margin-bottom: 21px;
+  text-decoration: none;
+}
+
+.FooterDescContainer {
+  margin-top: 30px;
+}
+
+.FooterDescRights {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
