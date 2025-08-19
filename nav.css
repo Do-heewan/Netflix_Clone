@@ -33,11 +33,32 @@
 
 .nav__input {
   position: fixed;
-  left: 44%;
+  left: 50%; /* 타 페이지로 이동하는 버튼들 추가하면서 위치 조정하였음 */
   transform: translate(-50%, 0);
   background-color: rgb(45, 45, 45);
   border-radius: 5px;
   color: white;
   padding: 5px;
   border: none;
+}
+
+
+/* 타 페이지로 이동하는 버튼들 */
+.nav__btns {
+  position: fixed;
+  left: 18%;
+  display: flex;
+}
+
+.nav__btns button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.nav__btns button:first-of-type {
+  font-weight: 700;
 }
