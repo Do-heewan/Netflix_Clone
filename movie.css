@@ -1,0 +1,61 @@
+.movie-pannel {
+    /* background-color: aliceblue; */
+    margin-top: 70px;
+}
+
+.movie-menu {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.movie-menu-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 30px;
+}
+
+.movie-menu-right {
+    margin-right: 30px;
+}
+
+.movie-menu p {
+    margin: 0px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.movie-menu select {
+    padding: 4px 2px;
+    font-size: 16px;
+    background: black;
+    border: 1px solid white;
+    color: white;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.movie-card {
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  padding: 8px;
+}
+
+.movie-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* 원하는 비율 */
+  object-fit: contain;   /* 이미지 원본 비율 유지 + 여백 남김 */
+  background-color: #000;
+  height: auto;
+}
