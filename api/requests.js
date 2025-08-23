@@ -30,9 +30,25 @@ function getMovieByGenre(genreId) {
     });
 }
 
-
+function searchMovie(query) {
+  return window.api
+    .get("/search/movie", {
+      params: {
+        query: query,
+        language: "ko-KR",
+      },
+    })
+    .then((res) => {
+      console.log("Search results:", res.data);
+      return res.data;
+    })
+    .catch((err) => {
+      console.error("Error searching for a movie:", err);
+    });
+}
 
 
 // 전역 함수로 등록
 window.fetchGenres = fetchGenres;
 window.getMovieByGenre = getMovieByGenre;
+window.searchMovie = searchMovie;
