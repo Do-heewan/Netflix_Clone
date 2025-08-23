@@ -19,11 +19,16 @@
       class='nav_logo'
     />
 
-    <div class='nav__btns'>
-      <button class="home">홈</button>
-      <button>시리즈</button>
-      <button class='movie'>영화</button>
-      <button>게임</button>
+    <div class="nav__menu">
+      <div class='nav__btns'>
+        <button class="home">홈</button>
+        <button>시리즈</button>
+        <button class='movie'>영화</button>
+        <button>게임</button>
+      </div>
+
+      <!-- 태블릿 화면 너비일 때, 메뉴 버튼 -->
+      <button class="menu_toggle">메뉴 ▼</button>
     </div>
 
     <input 
@@ -82,4 +87,5 @@
 <script src="api/axios.js"></script>
 <script src="api/requests.js"></script>
 <script src="javascript/moveToPage.js"></script>
+<script src="javascript/navMenuToggle.js"></script>
 </html>

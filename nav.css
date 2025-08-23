@@ -33,7 +33,7 @@
 
 .nav__input {
   position: fixed;
-  left: 50%; /* 타 페이지로 이동하는 버튼들 추가하면서 위치 조정하였음 */
+  left: 60%; /* 타 페이지로 이동하는 버튼들 추가하면서 위치 조정하였음 */
   transform: translate(-50%, 0);
   background-color: rgb(45, 45, 45);
   border-radius: 5px;
@@ -44,10 +44,17 @@
 
 
 /* 타 페이지로 이동하는 버튼들 */
-.nav__btns {
+.nav__menu {
   position: fixed;
-  left: 18%;
+  left: 25%;
   display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__btns {
+  display: flex;
+  gap: 10px;
 }
 
 .nav__btns button {
@@ -61,4 +68,53 @@
 
 .nav__btns button:first-of-type {
   font-weight: 700;
+}
+
+/* 메뉴 토글의 기본 상태(보이지 않도록) -> 데스크톱 너비 */
+.menu_toggle {
+  display: none; /* 기본은 숨김 */
+  background: none;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+/* 반응형 */
+
+/* 태블릿 너비인 경우 */
+@media (max-width: 900px) {
+  .nav__btns {
+    display: none;
+  }
+  .menu_toggle {
+    display: block;
+  }
+  .nav__btns.active {
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    left: -30px;
+    top: 30px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 10px;
+  }
+
+  .nav__btns.active button {
+    width: 100%; 
+    white-space: nowrap;
+    text-align: center;
+  }
+}
+
+/* 모바일 너비인 경우 */
+@media screen and (max-width: 400px) {
+  .nav__input {
+    display: none; /* 검색창 숨김 */
+  }
 }
